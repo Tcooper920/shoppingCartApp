@@ -5,37 +5,37 @@ const calculatedTotalContainer = document.getElementsByClassName("calculated-tot
 // List of products in "database"...
 const storeProducts = [
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 1", 
-        productPrice: "1.00",
+        productPrice: "100.00",
         productQuantity: "1"
     },
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 2", 
         productPrice: "8.99",
         productQuantity: "1"
     },
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 3", 
         productPrice: "1.00",
         productQuantity: "1"
     },
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 4", 
         productPrice: "1.55",
         productQuantity: "1"
     },
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 5", 
         productPrice: "3.00",
         productQuantity: "1"
     },
     {
-        productImage: "", 
+        productImage: "images/product-image-placeholder.png", 
         productName: "Product 6", 
         productPrice: "4.00",
         productQuantity: "1"
@@ -47,12 +47,22 @@ let shoppingCart = [];
 // Display products on page...
 const displayProducts = (productImage, productName, productPrice, productQuantity) => {
     return `<div class='product'>
-                <img src='${productImage}' alt='${productName}'> 
-                <div>${productName}</div>
-                <div>$${productPrice}</div>
-                <button class='add-to-cart-btn'>Add to Cart</button>
-                <button class='remove-item-btn'>Remove</button>
-                <input class='quantity-field' type='text' name='quantity' placeholder='quantity' value=${productQuantity}>
+                <img class='product-image' width='80' src='${productImage}' alt='${productName}'> 
+                <div class='product-name'><p>${productName}</p></div>
+                <div class='price'>$<span>${productPrice}</span></div>
+                <div class='add-to-cart-wrapper'>
+                    <button class='add-to-cart-btn'>Add to Cart</button>
+                </div>
+                <input 
+                    class='quantity-field' 
+                    type='text' 
+                    name='quantity' 
+                    placeholder='quantity' 
+                    value=${productQuantity}
+                >
+                <div class='remove-from-cart-wrapper'>
+                    <button class='remove-item-btn'>Remove</button>
+                </div>
             </div>`
 };
 

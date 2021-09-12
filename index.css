@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.product {
+    display: flex;
+}
+
+.product > * {
+    padding: 1rem;
+    margin-top: .5rem;
+}
+
+.product-list .remove-item-btn {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.product-list .quantity-field {
+    display: none;
+}
+
+.quantity-field {
+    border: 1px solid grey;
+}
+
+.cart {
+    background: lightgreen;
+}
+
+.cart .add-to-cart-btn {
+    display: none;
+}

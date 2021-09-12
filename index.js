@@ -103,14 +103,14 @@ const updateCart = () => {
 };
 
 // Changing the quantity...
-document.addEventListener("keyup", (event) => {
-    let quantityFieldList = [...document.querySelectorAll(".cart .quantity-field")];
+document.addEventListener("input", (event) => {
+    let quantityFieldList = [...document.querySelectorAll(".cart input.quantity-field")];
     
     for (let i = 0; i < quantityFieldList.length; i++) {
         if (quantityFieldList[i] === event.target) {
             shoppingCart[i].productQuantity = event.target.value;
+            calculateTotal();
         }
-        updateCart();
     }
 });
 

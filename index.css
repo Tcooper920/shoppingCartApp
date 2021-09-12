@@ -36,3 +36,7 @@ button:hover {
 .cart .add-to-cart-btn {
     display: none;
 }
+
+.focus {
+    border: 5px solid red;
+}

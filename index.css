@@ -141,6 +141,11 @@ button:hover {
     display: inline-block;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
 /* MEDIA QUERIES *************************************************************************/
 @media screen and (max-width: 580px) {
     main {

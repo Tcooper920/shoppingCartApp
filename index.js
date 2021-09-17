@@ -94,10 +94,13 @@ document.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-item-btn")) {
         for (let i = 0; i < removeFromCartButtonList.length; i++) {
             if (removeFromCartButtonList[i] === event.target) {
+                let thisCartItem = [...document.querySelectorAll(".cart .product")];
+                
+                thisCartItem[i].classList.add("fade-out");
                 shoppingCart.splice(i, 1);
             }
         }
-        updateCart();
+        setTimeout(() => updateCart(), 500);
     }
 });
 
